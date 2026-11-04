@@ -15,3 +15,15 @@ elif a == 2:
 elif a == 3:
     print("You have selected View Budget Summary.")
 
+ 
+print("What type of income is this?")
+print ("\n1 Salary,\n2 Other Income")
+
+       
+b = int(input(""))
+
+if b ==1:
+    print(input("Please enter the amount of your salary: "))
+if b == 2:
+    print(input("Please enter the amount of your other income: "))
+
