@@ -6,6 +6,8 @@ print("1 Add Income")
 print("2 Add Expense")
 print("3 View Budget Summary")
 
+#navigatin through the first menu option
+
 a = int(input(""))
 
 if a == 1:
@@ -17,9 +19,10 @@ elif a == 3:
 
  
 print("What type of income is this?")
-print ("\n1 Salary,\n2 Other Income")
+print("\n1 Salary,\n2 Other Income")
 
-       
+#adding incomes by naviating through the second menu option
+      
 b = int(input(""))
 
 if b ==1:
