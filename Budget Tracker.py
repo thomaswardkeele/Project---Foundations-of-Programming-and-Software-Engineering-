@@ -27,9 +27,6 @@ def income1():
 
 # Adding incomes by naviating through the second income menu option ------------------------------------------------------------
       
-
-
-
 def income2():
 
 print("What type of income is this?")
@@ -94,3 +91,15 @@ def personalbills():
         print(input("You have selected food."))
     else :
         print("Invalid option selected. Please try again.")
+
+#Leisure bill menu ---------------------------------------------------------------------------------------------------------------
+
+def leisurebills():
+    print("what type of leisure bill is this?")
+    print("Please select an option from the menu below using the numbers")
+    print("n1 Eating/Drinking out, \n2 
+
+    e = int(input(""))
+
+    if e == 1:
+        print(input("You have selected entertainment."))
