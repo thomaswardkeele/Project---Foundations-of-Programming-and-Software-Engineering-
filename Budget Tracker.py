@@ -11,7 +11,7 @@ print("1 Add Income")
 print("2 Add Expense")
 print("3 View Budget Summary")
 
-#Functions to be called on: --------------------
+#Functions to be called on: ----------------------------------------------------------------
 
 def income1():
     a = int(input(""))
@@ -45,7 +45,6 @@ def income2():
 
 
 # Adding expenses by navigating through the second expense menu option ---------
-
 
 def expense1():
 
@@ -85,6 +84,7 @@ def expense1():
 
 
 #personal bill menu ----------------------------------------------------------------
+
 def personalbills():
 
     print("what type of personal bill is this?")
@@ -113,6 +113,7 @@ def personalbills():
         print("Invalid option selected. Please select a number between 1 - 5")
 
 #Leisure bill menu ----------------------------------------------------------------
+
 def leisurebills():
 
     print("what type of leisure bill is this?")
@@ -140,3 +141,9 @@ def leisurebills():
     else:
         print("Invalid option selected. Please select a number between 1 - 4")
         
+def savings():
+    print("You have selected savings.")
+    savings = float(input("Please enter the amount of your savings: "))
+    savingscomment = input("Please enter a comment for your savings: ")
+    print( str(savings) + "0" +" " + savingscomment)# space is there to separate the comment from the amount of savings 
+
