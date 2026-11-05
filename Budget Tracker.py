@@ -23,9 +23,9 @@ def income1():
     elif a == 3:
         print("You have selected View Budget Summary.")
     else :
-        print("Invalid option selected. Please try again.")
+        print("Invalid option selected. Please select a number between 1 - 3.")
 
-# Adding incomes by naviating through the second income menu option ------------------------------------------------------------
+# Adding incomes by naviating through the second income menu option ---------------------------------------------------------------
       
 def income2():
 
@@ -40,14 +40,11 @@ print("\n1 Salary,\n2 Other Income")
     elif b == 2:
             print(input("Please enter the amount of your other income: "))
     else :
-        print("Invalid option selected. Please try again.")
+        print("Invalid option selected. Please select a number between 1 - 2.")
 
 
 # Adding expenses by navigating through the second expense menu option ------------------------------------------------------------
 
-print("What type of expense is this?")
-print("Please select an option from the menu below using the numbers")
-print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
 
 def expense1():
 
@@ -69,7 +66,7 @@ print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 O
     elif c == 5:
         print(input("Enter any other expenses."))
     else :
-        print("Invalid option selected. Please try again.")
+        print("Invalid option selected. Please select a number between 1 - 5")
 
 #personal bill menu ---------------------------------------------------------------------------------------------------------------
 
@@ -90,16 +87,26 @@ def personalbills():
     elif d == 4:
         print(input("You have selected food."))
     else :
-        print("Invalid option selected. Please try again.")
+        print("Invalid option selected. Please select a number between 1 - 5")
 
 #Leisure bill menu ---------------------------------------------------------------------------------------------------------------
 
 def leisurebills():
+
     print("what type of leisure bill is this?")
     print("Please select an option from the menu below using the numbers")
-    print("n1 Eating/Drinking out, \n2 
+    print("n1 Eating/Drinking out, \n2 Clothes, \n3 Hobbies, \n4 Other")
 
     e = int(input(""))
 
     if e == 1:
-        print(input("You have selected entertainment."))
+        print(input("You have selected Entertaintment"))
+    elif e == 2:
+        print(input("Yu have selected Clothes"))
+    elif e== 3 
+        print(input("You have selected Hobbies"))
+    elif e == 4:
+        print(input("You have selected Other"))
+    else:
+        print("Invalid option selected. Please select a number between 1 - 4")
+        
