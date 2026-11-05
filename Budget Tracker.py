@@ -94,13 +94,21 @@ def personalbills():
     d = int(input(""))
 
     if d == 1:
-        print(input("You have selected phone."))
+        print("You have selected phone.")
+        phone = float(input("Please enter the amount of your phone bill: "))
+        print("£", phone, "has been added to your budget tracker.")
     elif d == 2:
-        print(input("You have selected fuel."))
+        print("You have selected fuel.")
+        fuel = float(input("Please enter the amount of your fuel expenses: "))
+        print("£", fuel, "has been added to your budget tracker.")
     elif d == 3:
-        print(input("You have selected subscriptions."))
+        print("You have selected subscriptions.")
+        subscriptions = float(input("Please enter the amount of your subscriptions: "))
+        print("£", subscriptions, "has been added to your budget tracker.")
     elif d == 4:
-        print(input("You have selected food."))
+        print("You have selected food.")
+        food = float(input("Please enter the amount of your food expenses: "))
+        print("£", food, "has been added to your budget tracker.")
     else :
         print("Invalid option selected. Please select a number between 1 - 5")
 
