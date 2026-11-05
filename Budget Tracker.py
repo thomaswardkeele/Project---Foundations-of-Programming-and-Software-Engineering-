@@ -145,5 +145,10 @@ def savings():
     print("You have selected savings.")
     savings = float(input("Please enter the amount of your savings: "))
     savingscomment = input("Please enter a comment for your savings: ")
-    print( str(savings) + "0" +" " + savingscomment)# space is there to separate the comment from the amount of savings 
+    print ("£" + str(savings) + "0" +" " + ": "+ savingscomment + " has been put into Savings") 
 
+def otherexpense():
+    print ("You have selected other expenses.")
+    others = float(input("Please enter what other expenses you have: "))
+    otherscomment = input("Please enter a comment for this expense: ")
+    print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
