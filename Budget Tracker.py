@@ -35,19 +35,13 @@ def income2():
 
 
     b = int(input(""))
-     if b == 1:
-             print(input("Please enter the amount of your salary: "))
-             salary = float(input("Please enter the amount of your salary: "
-     elif b == 2:
-            print(input("Please enter the amount of your other income: "))
-            other_income = float(input(""))
-      else
-            print("Invalid option selected. Please select a number between 1 - 2.")
-
-    if float(salary) > 0:
-        print("£", salary, "has been added to your budget tracker.")
-    elif float(other_income) > 0:
-        print("£", other_income, "has been added to your budget tracker.")
+    if b == 1:
+        salary = float(input("Please enter the amount of your salary: "))
+    elif b == 2:
+        otherincome = float(input("Please enter the amount of your other income: "))
+        print("£",otherincome, "has been added to your tracker")
+    else:
+        print("Invalid option selected. Please select a number between 1 - 2.")
 
 
 # Adding expenses by navigating through the second expense menu option ---------
