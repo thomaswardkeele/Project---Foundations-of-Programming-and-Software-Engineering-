@@ -37,7 +37,7 @@ def income2():
     b = int(input(""))
      if b == 1:
              print(input("Please enter the amount of your salary: "))
-             salary = float(input(" "))
+             salary = float(input("Please enter the amount of your salary: "
      elif b == 2:
             print(input("Please enter the amount of your other income: "))
             other_income = float(input(""))
@@ -48,7 +48,6 @@ def income2():
         print("£", salary, "has been added to your budget tracker.")
     elif float(other_income) > 0:
         print("£", other_income, "has been added to your budget tracker.")
-
 
 
 # Adding expenses by navigating through the second expense menu option ---------
