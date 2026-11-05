@@ -48,25 +48,40 @@ print("\n1 Salary,\n2 Other Income")
 
 def expense1():
 
-print("What type of expense is this?")
-print("Please select an option from the menu below using the numbers")
-print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
-
+    print("What type of expense is this?")
+    print("Please select an option from the menu below using the numbers")
+    print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
 
     c = int(input(""))
 
     if c == 1:
-        print(input("You have selected house utilities."))
-    elif c== 2:
-        print(input("You have selected personal expenses."))
+        print("You have selected house utilities.")
+        houseutilities = float(input("Please enter the amount of your house utilities: "))
+        print("£", houseutilities, "has been added to your budget tracker.")
+
+    elif c == 2:
+        print("You have selected personal expenses.")
+        personalexpenses = float(input("Please enter the amount of your personal expenses: "))
+        print("£", personalexpenses, "has been added to your budget tracker.")
+
     elif c == 3:
-        print(input("You have selected leisure."))
-    elif c == 4:      
-        print(input("You have selected savings."))
+        print("You have selected leisure.")
+        leisureexpenses = float(input("Please enter the amount of your leisure expenses: "))
+        print("£", leisureexpenses, "has been added to your budget tracker.")
+
+    elif c == 4:
+        print("You have selected savings.")
+        savings = float(input("Please enter the amount of your savings: "))
+        print("£", savings, "has been added to your budget tracker.")
+
     elif c == 5:
-        print(input("Enter any other expenses."))
-    else :
+        print("Enter any other expenses.")
+        otherexpenses = float(input("Please enter the amount of your other expenses: "))
+        print("£", otherexpenses, "has been added to your budget tracker.")
+
+    else:
         print("Invalid option selected. Please select a number between 1 - 5")
+
 
 #personal bill menu ---------------------------------------------------------------------------------------------------------------
 
@@ -102,7 +117,7 @@ def leisurebills():
     if e == 1:
         print(input("You have selected Entertaintment"))
     elif e == 2:
-        print(input("Yu have selected Clothes"))
+        print(input("You have selected Clothes"))
     elif e== 3 
         print(input("You have selected Hobbies"))
     elif e == 4:
