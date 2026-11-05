@@ -11,7 +11,7 @@ print("1 Add Income")
 print("2 Add Expense")
 print("3 View Budget Summary")
 
-#Functions to be called on: ------------------------------------------------------------------------------------------------- 
+#Functions to be called on: --------------------
 
 def income1():
     a = int(input(""))
@@ -25,25 +25,33 @@ def income1():
     else :
         print("Invalid option selected. Please select a number between 1 - 3.")
 
-# Adding incomes by naviating through the second income menu option ---------------------------------------------------------------
+# Adding incomes by naviating through the second income menu option ------------------------
       
 def income2():
 
-print("What type of income is this?")
-print("Please select an option from the menu below using the numbers 1 - 2") #call to action
-print("\n1 Salary,\n2 Other Income")
+    print("What type of income is this?")
+    print("Please select an option from the menu below using the numbers 1 - 2") #call to action
+    print("\n1 Salary,\n2 Other Income")
 
 
     b = int(input(""))
-    if b == 1:
-        print(input("Please enter the amount of your salary: "))
-    elif b == 2:
+     if b == 1:
+             print(input("Please enter the amount of your salary: "))
+             salary = float(input(" "))
+     elif b == 2:
             print(input("Please enter the amount of your other income: "))
-    else :
-        print("Invalid option selected. Please select a number between 1 - 2.")
+            other_income = float(input(""))
+      else
+            print("Invalid option selected. Please select a number between 1 - 2.")
+
+    if float(salary) > 0:
+        print("£", salary, "has been added to your budget tracker.")
+    elif float(other_income) > 0:
+        print("£", other_income, "has been added to your budget tracker.")
 
 
-# Adding expenses by navigating through the second expense menu option ------------------------------------------------------------
+
+# Adding expenses by navigating through the second expense menu option ---------
 
 
 def expense1():
@@ -83,8 +91,7 @@ def expense1():
         print("Invalid option selected. Please select a number between 1 - 5")
 
 
-#personal bill menu ---------------------------------------------------------------------------------------------------------------
-
+#personal bill menu ----------------------------------------------------------------
 def personalbills():
 
     print("what type of personal bill is this?")
@@ -112,8 +119,7 @@ def personalbills():
     else :
         print("Invalid option selected. Please select a number between 1 - 5")
 
-#Leisure bill menu ---------------------------------------------------------------------------------------------------------------
-
+#Leisure bill menu ----------------------------------------------------------------
 def leisurebills():
 
     print("what type of leisure bill is this?")
@@ -123,13 +129,21 @@ def leisurebills():
     e = int(input(""))
 
     if e == 1:
-        print(input("You have selected Entertaintment"))
+        print("You have selected Entertaintment")
+        entertaintment = float(input("Please enter the amount of your entertaintment expenses: "))
+        print("£", entertaintment, "has been added to your budget tracker.")
     elif e == 2:
-        print(input("You have selected Clothes"))
-    elif e== 3 
-        print(input("You have selected Hobbies"))
+        print("You have selected Clothes")
+        clothes = float(input("Please enter the amount of your clothes expenses: "))
+        print("£", clothes, "has been added to your budget tracker.")
+    elif e== 3:
+        print("You have selected Hobbies")
+        hobbies = float(input("Please enter the amount of your hobbies expenses: "))
+        print("£", hobbies, "has been added to your budget tracker.")
     elif e == 4:
-        print(input("You have selected Other"))
+        print("You have selected Other")
+        other = float(input("Please enter the amount of any other expenses: "))
+        print("£", other, "has been added to your budget tracker.")
     else:
         print("Invalid option selected. Please select a number between 1 - 4")
         
