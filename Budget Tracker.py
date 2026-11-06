@@ -7,7 +7,7 @@ print("Please select an option from the menu below using the numbers 1 - 3") #ca
 
 
 # Navigating through the first menu option
-def firstmenu():
+def first_menu():
 
     print("1 Add Income")
     print("2 Add Expense")
@@ -16,32 +16,32 @@ def firstmenu():
 #Functions to be called on: ----------------------------------------------------------------
 
 def income1():
-    a = int(input(""))
+    income1 = int(input(""))
     
-    if a == 1:
+    if income1 == 1:
         print("You have selected Add Income.")
         income2()
     
-    elif a == 2:
+    elif income1 == 2:
         print("You have selected Add Expense.")
-    elif a == 3:
+    elif income1 == 3:
         print("You have selected View Budget Summary.")
     else :
         print("Invalid option selected. Please select a number between 1 - 3.")
 
 # Adding incomes by naviating through the second income menu option ------------------------
       
-def income2():
+def income_2():
 
     print("What type of income is this?")
     print("Please select an option from the menu below using the numbers 1 - 2") #call to action
     print("\n1 Salary,\n2 Other Income")
 
 
-    b = int(input(""))
-    if b == 1:
+    income2 = int(input(""))
+    if income2 == 1:
         salary = float(input("Please enter the amount of your salary: "))
-    elif b == 2:
+    elif income2 == 2:
         otherincome = float(input("Please enter the amount of your other income: "))
         print("£",otherincome, "has been added to your tracker")
     else:
@@ -56,29 +56,29 @@ def expense1():
     print("Please select an option from the menu below using the numbers")
     print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
 
-    c = int(input(""))
+    expense1 = int(input(""))
 
-    if c == 1:
+    if expense1 == 1:
         print("You have selected house utilities.")
         houseutilities = float(input("Please enter the amount of your house utilities: "))
         print("£", houseutilities, "has been added to your budget tracker.")
 
-    elif c == 2:
+    elif expense1 == 2:
         print("You have selected personal expenses.")
         personalexpenses = float(input("Please enter the amount of your personal expenses: "))
         print("£", personalexpenses, "has been added to your budget tracker.")
 
-    elif c == 3:
+    elif expense1 == 3:
         print("You have selected leisure.")
         leisureexpenses = float(input("Please enter the amount of your leisure expenses: "))
         print("£", leisureexpenses, "has been added to your budget tracker.")
 
-    elif c == 4:
+    elif expense1 == 4:
         print("You have selected savings.")
         savings = float(input("Please enter the amount of your savings: "))
         print("£", savings, "has been added to your budget tracker.")
 
-    elif c == 5:
+    elif expense1 == 5:
         print("Enter any other expenses.")
         otherexpenses = float(input("Please enter the amount of your other expenses: "))
         print("£", otherexpenses, "has been added to your budget tracker.")
@@ -95,21 +95,21 @@ def personalbills():
     print("Please select an option from the menu below using the numbers")
     print("\n1 Phone, \n2 Fuel, \n3 Subscriptions, \n4 Food \n5 Other")
 
-    d = int(input(""))
+    personal_bills = int(input(""))
 
-    if d == 1:
+    if personal_bills == 1:
         print("You have selected phone.")
         phone = float(input("Please enter the amount of your phone bill: "))
         print("£", phone, "has been added to your budget tracker.")
-    elif d == 2:
+    elif personal_bills == 2:
         print("You have selected fuel.")
         fuel = float(input("Please enter the amount of your fuel expenses: "))
         print("£", fuel, "has been added to your budget tracker.")
-    elif d == 3:
+    elif personal_bills == 3:
         print("You have selected subscriptions.")
         subscriptions = float(input("Please enter the amount of your subscriptions: "))
         print("£", subscriptions, "has been added to your budget tracker.")
-    elif d == 4:
+    elif personal_bills == 4:
         print("You have selected food.")
         food = float(input("Please enter the amount of your food expenses: "))
         print("£", food, "has been added to your budget tracker.")
@@ -118,27 +118,27 @@ def personalbills():
 
 #Leisure bill menu ----------------------------------------------------------------
 
-def leisurebills():
+def leisure_bills():
 
     print("what type of leisure bill is this?")
     print("Please select an option from the menu below using the numbers")
     print("n1 Eating/Drinking out, \n2 Clothes, \n3 Hobbies, \n4 Other")
 
-    e = int(input(""))
+    leisure_bills = int(input(""))
 
-    if e == 1:
+    if leisure_bills == 1:
         print("You have selected Entertaintment")
         entertaintment = float(input("Please enter the amount of your entertaintment expenses: "))
         print("£", entertaintment, "has been added to your budget tracker.")
-    elif e == 2:
+    elif leisure_bills == 2:
         print("You have selected Clothes")
         clothes = float(input("Please enter the amount of your clothes expenses: "))
         print("£", clothes, "has been added to your budget tracker.")
-    elif e== 3:
+    elif leisure_bills == 3:
         print("You have selected Hobbies")
         hobbies = float(input("Please enter the amount of your hobbies expenses: "))
         print("£", hobbies, "has been added to your budget tracker.")
-    elif e == 4:
+    elif leisure_bills == 4:
         print("You have selected Other")
         other = float(input("Please enter the amount of any other expenses: "))
         print("£", other, "has been added to your budget tracker.")
@@ -158,15 +158,5 @@ def otherexpense():
     print ("£" + str(others) + "0" + " " + ": " + otgit config --global user.name “thomaswardkeele”herscomment + " has been put into Other Expenses")
 
 
-#main menu logic
 
-def mainmenu():
-
-
-;
-
-
-
-
-expensemenu - input(1-5)
     
