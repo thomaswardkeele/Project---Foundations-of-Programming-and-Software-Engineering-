@@ -152,3 +152,5 @@ def otherexpense():
     others = float(input("Please enter what other expenses you have: "))
     otherscomment = input("Please enter a comment for this expense: ")
     print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
+
+while
