@@ -7,9 +7,11 @@ print("Please select an option from the menu below using the numbers 1 - 3") #ca
 
 
 # Navigating through the first menu option
-print("1 Add Income")
-print("2 Add Expense")
-print("3 View Budget Summary")
+def firstmenu():
+
+    print("1 Add Income")
+    print("2 Add Expense")
+    print("3 View Budget Summary")
 
 #Functions to be called on: ----------------------------------------------------------------
 
@@ -18,6 +20,8 @@ def income1():
     
     if a == 1:
         print("You have selected Add Income.")
+        income2()
+    
     elif a == 2:
         print("You have selected Add Expense.")
     elif a == 3:
@@ -151,6 +155,18 @@ def otherexpense():
     print ("You have selected other expenses.")
     others = float(input("Please enter what other expenses you have: "))
     otherscomment = input("Please enter a comment for this expense: ")
-    print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
+    print ("£" + str(others) + "0" + " " + ": " + otgit config --global user.name “thomaswardkeele”herscomment + " has been put into Other Expenses")
 
-while
+
+#main menu logic
+
+def mainmenu():
+
+
+;
+
+
+
+
+expensemenu - input(1-5)
+    
