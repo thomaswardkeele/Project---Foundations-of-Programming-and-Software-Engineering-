@@ -89,7 +89,7 @@ def expense1():
 
 #personal bill menu ----------------------------------------------------------------
 
-def personalbills():
+def personal_bills():
 
     print("what type of personal bill is this?")
     print("Please select an option from the menu below using the numbers")
@@ -121,8 +121,8 @@ def personalbills():
 def leisure_bills():
 
     print("what type of leisure bill is this?")
-    print("Please select an option from the menu below using the numbers")
-    print("n1 Eating/Drinking out, \n2 Clothes, \n3 Hobbies, \n4 Other")
+    print("Please select an option from the menu below using the numbers between 1-4")
+    print("\n1 Eating/Drinking out, \n2 Clothes, \n3 Hobbies, \n4 Other")
 
     leisure_bills = int(input(""))
 
@@ -144,6 +144,37 @@ def leisure_bills():
         print("£", other, "has been added to your budget tracker.")
     else:
         print("Invalid option selected. Please select a number between 1 - 4")
+
+
+#Housing bill menu 
+
+def housing_bills():
+
+    print("what type of housing bill is this?")
+    print("Please select an option from the menu below using the numbers between 1-6. ")
+    print("\n1 Rent,\n2 Electricity,\n3 Gas, \n4 Council Tax, \n5 Water, \n6 Other ")
+
+    housing_bills = int(input (""))
+
+    if housing_bills == 1:
+        print("You have selected Rent")
+        rent = float(input("Please enter your Rent"))
+        print( )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 def savings():
     print("You have selected savings.")
@@ -155,8 +186,10 @@ def otherexpense():
     print ("You have selected other expenses.")
     others = float(input("Please enter what other expenses you have: "))
     otherscomment = input("Please enter a comment for this expense: ")
-    print ("£" + str(others) + "0" + " " + ": " + otgit config --global user.name “thomaswardkeele”herscomment + " has been put into Other Expenses")
+    print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
 
 
+while True:
+    menu=
 
     
