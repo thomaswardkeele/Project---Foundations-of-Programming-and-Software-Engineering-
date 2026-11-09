@@ -17,7 +17,9 @@ def first_menu():
 
 #Functions to be called on: ----------------------------------------------------------------
 
-def income_2():
+
+# Adding incomes by naviating through the second income menu option ------------------------
+def income_1():
 
     print("What type of income is this?")
     print("Please select an option from the menu below using the numbers 1 - 2") #call to action
@@ -34,20 +36,20 @@ def income_2():
     else:
         print("Invalid option selected. Please select a number between 1 - 2.")
 
-def income_1():
-    income_1 = int(input(""))
+def income_2():
+    income_2 = int(input(""))
     
-    if income_1 == 1:
+    if income_2 == 1:
         print("You have selected Add Income.")
-        income_2()
-    elif income_1 == 2:
+        income_1()
+    elif income_2 == 2:
         print("You have selected Add Expense.")
-    elif income_1 == 3:
+    elif income_2 == 3:
         print("You have selected View Budget Summary.")
     else :
         print("Invalid option selected. Please select a number between 1 - 3.")
 
-# Adding incomes by naviating through the second income menu option ------------------------
+
       
 
 
