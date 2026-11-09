@@ -43,7 +43,7 @@ def income_2():
             print("You have selected Add Expense.")
         elif income_2 == 3:
             print("You have selected View Budget Summary.")
-        else :
+        else:
             print("Invalid option selected. Please select a number between 1 - 3.")
 
 # Introduction
@@ -218,26 +218,27 @@ menu = int(input(""))
 
 while True:
     
-        if menu == 1:
-                income_2()
-        elif menu == 2:
-                expense1()
-                if menu == 1:
-                    housing_bills()
-                    first_menu()
-                elif menu == 2:
-                    personal_bills()
-                    first()
-                elif menu == 3:
-                    leisure_bills()
-                    first_menu()
-                elif menu == 4:
-                    savings()
-                    first_menu()
-                else:
-                    print("Please select an option from the menu below using the numbers")
-                    print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
-                    first_menu()
+    if menu == 1:
+            income_2()
+    elif menu == 2:
+            expense1()
+            if menu == 1:
+                housing_bills()
+                first_menu()
+            elif menu == 2:
+                personal_bills()
+                first_menu()
+            elif menu == 3:
+                leisure_bills()
+                first_menu()
+            elif menu == 4:
+                savings()
+                first_menu()
+            else:
+                print("Please select an option from the menu below using the numbers")
+                print("1 Add Income")
+                print("2 Add Expense")
+                print("3 View Budget Summary")
                 
                 
 
