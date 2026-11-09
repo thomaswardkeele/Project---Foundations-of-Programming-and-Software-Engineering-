@@ -1,12 +1,6 @@
-#I have used Gen AI for the purposes of creating this assesment 
-
-import os
+#I have used Gen AI for the purposes of checking and my reviewing my work in this assessment.
 
 # Introduction
-def intro():
-
-    print("Welcome to Budget Tracker! Please select an option from the menu below:")
-    print("Please select an option from the menu below using the numbers 1 - 3") #call to action
 
 
     # Navigating through the first menu option
@@ -20,10 +14,11 @@ def first_menu():
 
     # Adding incomes by naviating through the second income menu option 
 def income_1():
-
+        print("Please first enter your income.")
         print("What type of income is this?")
-        print("Please select an option from the menu below using the numbers 1 - 2. Press any other chracter to go back to the main menu") #call to action
-        print("\n1 Salary,\n2 Other Income")
+        print("Please select an option from the menu below using the numbers 1 - 2. Press any other chracter to go back to the main menu")
+        print("\n1 Income, \n2 Other")
+       
 
 
         incomechoice = int(input(""))
@@ -51,6 +46,13 @@ def income_2():
         else :
             print("Invalid option selected. Please select a number between 1 - 3.")
 
+# Introduction
+
+def intro():
+
+    print("Welcome to Budget Tracker! Please select an option from the menu below:")
+    income_1()
+
     # Adding expenses by navigating through the second expense menu option
 
 def expense1():
@@ -65,7 +67,7 @@ def expense1():
             print("You have selected house utilities.")
             houseutilities = float(input("Please enter the amount of your house utilities: "))
             print("£", houseutilities, "has been added to your budget tracker.")
-            
+
 
         elif expense1 == 2:
             print("You have selected personal expenses.")
@@ -205,12 +207,14 @@ def otherexpense():
         print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
 
 
-    #Navigation menu
+
+
+#Navigation menu
 intro()
 
 menu = int(input(""))
 
-first_menu()
+
 
 while True:
     
@@ -220,12 +224,16 @@ while True:
                 expense1()
                 if menu == 1:
                     housing_bills()
+                    first_menu()
                 elif menu == 2:
                     personal_bills()
+                    first()
                 elif menu == 3:
                     leisure_bills()
+                    first_menu()
                 elif menu == 4:
                     savings()
+                    first_menu()
                 else:
                     print("Please select an option from the menu below using the numbers")
                     print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
