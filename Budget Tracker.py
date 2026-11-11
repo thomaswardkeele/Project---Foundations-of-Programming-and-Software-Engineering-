@@ -25,11 +25,11 @@ def income_1():
         if incomechoice == 1:
             salary = float(input("Please enter the amount of your salary: "))
             print("£",salary, "has been added to your tracker. Please press a button to continue" )
-            first_menu()
+            
         elif incomechoice == 2:
             otherincome = float(input("Please enter the amount of your other income: "))
             print("£",otherincome, "has been added to your tracker. Please press a button to continue")
-            first_menu()
+            
         else:
             first_menu()
 
@@ -50,7 +50,7 @@ def income_2():
 
 def intro():
 
-    print("Welcome to Budget Tracker! Please select an option from the menu below:")
+    print("Welcome to Budget Tracker!")
     income_1()
 
     # Adding expenses by navigating through the second expense menu option
@@ -91,6 +91,44 @@ def expense1():
 
         else:
             print("Invalid option selected. Please select a number between 1 - 5")
+
+
+#Housing bill menu 
+
+def housing_bills():
+
+        print("what type of housing bill is this?")
+        print("Please select an option from the menu below using the numbers between 1-6. ")
+        print("\n1 Rent,\n2 Electricity,\n3 Gas, \n4 Council Tax, \n5 Water, \n6 Other ")
+
+        housing_bills = int(input (""))
+
+        if housing_bills == 1:
+            print("You have selected Rent")
+            rent = float(input("Please enter your Rent"))
+            print("£", rent, "has been added to your budget tracker." )
+        elif housing_bills == 2:
+            print ("You have selected Electricity.")
+            electricity = float(input("Please enter the amount for your Electricity."))
+            print("£", electricity, "has been added to your budget tracker.")
+        elif housing_bills == 3:
+            print ("You have selected Gas.")
+            gas = float(input("Please enter the amount for your Gas."))
+            print("£", gas, "has been added to your budget tracker.")
+        elif housing_bills == 4:
+            print ("You have selected Council Tax.")
+            electricity = float(input("Please enter the amount for your Council Tax."))
+            print("£", electricity, "has been added to your budget tracker.")
+        elif housing_bills == 5:
+            print ("You have selected Council Water.")
+            water = float(input("Please enter the amount for your Water."))
+            print("£", water, "has been added to your budget tracker.")
+        elif housing_bills == 6:
+            print ("You have selected Other.")
+            otherh = float(input("Please enter the amount for your Council Tax."))
+            print("£", otherh, "has been added to your budget tracker.")
+        else:
+            print("Invalid option selected. Please select a number between 1 - 6")
 
 
     #Personal bill menu 
@@ -156,49 +194,15 @@ def leisure_bills():
         else:
             print("Invalid option selected. Please select a number between 1 - 4")
 
-
-    #Housing bill menu 
-
-def housing_bills():
-
-        print("what type of housing bill is this?")
-        print("Please select an option from the menu below using the numbers between 1-6. ")
-        print("\n1 Rent,\n2 Electricity,\n3 Gas, \n4 Council Tax, \n5 Water, \n6 Other ")
-
-        housing_bills = int(input (""))
-
-        if housing_bills == 1:
-            print("You have selected Rent")
-            rent = float(input("Please enter your Rent"))
-            print("£", rent, "has been added to your budget tracker." )
-        elif housing_bills == 2:
-            print ("You have selected Electricity.")
-            electricity = float(input("Please enter the amount for your Electricity."))
-            print("£", electricity, "has been added to your budget tracker.")
-        elif housing_bills == 3:
-            print ("You have selected Gas.")
-            gas = float(input("Please enter the amount for your Gas."))
-            print("£", gas, "has been added to your budget tracker.")
-        elif housing_bills == 4:
-            print ("You have selected Council Tax.")
-            electricity = float(input("Please enter the amount for your Council Tax."))
-            print("£", electricity, "has been added to your budget tracker.")
-        elif housing_bills == 5:
-            print ("You have selected Council Water.")
-            water = float(input("Please enter the amount for your Water."))
-            print("£", water, "has been added to your budget tracker.")
-        elif housing_bills == 6:
-            print ("You have selected Other.")
-            otherh = float(input("Please enter the amount for your Council Tax."))
-            print("£", otherh, "has been added to your budget tracker.")
-        else:
-            print("Invalid option selected. Please select a number between 1 - 6")
-                    
+#savingsmenu
+          
 def savings():
         print("You have selected savings.")
         savings = float(input("Please enter the amount of your savings: "))
         savingscomment = input("Please enter a comment for your savings: ")
         print ("£" + str(savings) + "0" +" " + ": "+ savingscomment + " has been put into Savings") 
+
+#other expense menu
 
 def otherexpense():
         print ("You have selected other expenses.")
@@ -206,43 +210,33 @@ def otherexpense():
         otherscomment = input("Please enter a comment for this expense: ")
         print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
 
-
-
-
 #Navigation menu
 intro()
 
-menu = int(input(""))
-
-
-
 while True:
-    
-    if menu == 1:
-            income_2()
-    elif menu == 2:
-            expense1()
-            if menu == 1:
+    first_menu()
+
+    menu = input("")
+
+    if menu == "1":
+            income_1()
+    elif menu == "2":
+            expense_choice = expense1()
+            
+            if expense_choice == "1":
                 housing_bills()
-                first_menu()
-            elif menu == 2:
-                personal_bills()
-                first_menu()
-            elif menu == 3:
-                leisure_bills()
-                first_menu()
-            elif menu == 4:
+            elif expense_choice == "2":
+                personal_bills() 
+            elif expense_choice == "3":
+                leisure_bills()  
+            elif expense_choice == "4":
                 savings()
-                first_menu()
             else:
-                print("Please select an option from the menu below using the numbers")
-                print("1 Add Income")
-                print("2 Add Expense")
-                print("3 View Budget Summary")
-                
-                
+                print("Returning to main menu")
+                continue
 
-
-             
-
-    
+    elif menu == "3":
+        print("You have selected View Budget Summary")
+    else:
+        print("Invalid valid option. Returning to main menu.")
+        continue         
