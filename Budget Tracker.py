@@ -1,4 +1,7 @@
 #I have used Gen AI for the purposes of checking and my reviewing my work in this assessment.
+import csv
+    
+
 
 # Introduction
 
@@ -9,6 +12,7 @@ def first_menu():
         print("1 Add Income")
         print("2 Add Expense")
         print("3 View Budget Summary")
+        print("4 Exit")
 
     #Functions to be called on: 
 
@@ -237,6 +241,8 @@ while True:
 
     elif menu == "3":
         print("You have selected View Budget Summary")
+    elif menu == "4":
+         break
     else:
         print("Invalid valid option. Returning to main menu.")
-        continue         
+        continue
