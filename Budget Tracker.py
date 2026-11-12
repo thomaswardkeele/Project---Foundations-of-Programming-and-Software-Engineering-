@@ -104,26 +104,37 @@ def housing_bills():
             rent = float(input("Please enter your Rent:"))
             savedata(rent, "Expense", "Rent")
             print("£", rent, "has been added to your budget tracker." )
+
         elif housing_bills == 2:
             print ("You have selected Electricity.")
             electricity = float(input("Please enter the amount for your Electricity:"))
+            savedata(electricity,"Expense","Electricity")
             print("£", electricity, "has been added to your budget tracker.")
+
         elif housing_bills == 3:
             print ("You have selected Gas.")
             gas = float(input("Please enter the amount for your Gas:"))
+            savedata(gas, "Expense", "Gas" )
             print("£", gas, "has been added to your budget tracker.")
+
         elif housing_bills == 4:
             print ("You have selected Council Tax.")
-            electricity = float(input("Please enter the amount for your Council Tax:"))
-            print("£", electricity, "has been added to your budget tracker.")
+            council_tax = float(input("Please enter the amount for your Council Tax:"))
+            savedata(council_tax,"Expense", "Council Tax")
+            print("£", council_tax, "has been added to your budget tracker.")
+
         elif housing_bills == 5:
-            print ("You have selected Council Water.")
+            print ("You have selected Water.")
             water = float(input("Please enter the amount for your Water:"))
+            savedata(water, "Expense", "Water")
             print("£", water, "has been added to your budget tracker.")
+
         elif housing_bills == 6:
             print ("You have selected Other.")
-            otherh = float(input("Please enter the amount for your Council Tax:"))
+            otherh = float(input("Please enter the amount for your another type of Housing Bill:"))
+            savedata(otherh, "Expense", "Other Housing Bill")
             print("£", otherh, "has been added to your budget tracker.")
+
         else:
             print("Invalid option selected. Please select a number between 1 - 6")
 
@@ -141,22 +152,27 @@ def personal_bills():
         if personal_bills == 1:
             print("You have selected phone.")
             phone = float(input("Please enter the amount of your phone bill: "))
+            savedata(phone,"Expense", "Phone")
             print("£", phone, "has been added to your budget tracker.")
         elif personal_bills == 2:
             print("You have selected fuel.")
             fuel = float(input("Please enter the amount of your fuel expenses: "))
+            savedata(fuel, "Expense", "Fuel")
             print("£", fuel, "has been added to your budget tracker.")
         elif personal_bills == 3:
             print("You have selected subscriptions.")
             subscriptions = float(input("Please enter the amount of your subscriptions: "))
+            savedata(subscriptions, "Expense", "Subscrptions")
             print("£", subscriptions, "has been added to your budget tracker.")
         elif personal_bills == 4:
             print("You have selected food.")
             food = float(input("Please enter the amount of your food expenses: "))
+            savedata(food, "Expenses", "Food")
             print("£", food, "has been added to your budget tracker.")
         elif personal_bills == 5:
                 print ("You have selected other.")
                 otherp = float(input("Please enter the amount for your Council Tax."))
+                savedata(otherp, "Expenses", "Other Personal Bills")
                 print("£", otherp, "has been added to your budget tracker.")
                 
         else :
@@ -175,6 +191,7 @@ def leisure_bills():
         if leisure_bills == 1:
             print("You have selected Entertaintment")
             entertaintment = float(input("Please enter the amount of your entertaintment expenses: "))
+            savedata(entertaintment, "Expenses", "Expenses")
             print("£", entertaintment, "has been added to your budget tracker.")
         elif leisure_bills == 2:
             print("You have selected Clothes")
