@@ -1,6 +1,24 @@
 #I have used Gen AI for the purposes of checking and my reviewing my work in this assessment.
+
+#importing CSV 
 import csv
-    
+from pathlib import Path
+from datetime import date
+
+BASE_DIR = Path(__file__).resolve().parent
+CSV_FILE = BASE_DIR / "budgettracker.csv"
+
+
+#Saving data to CSV 
+
+def savedata(amount, transaction_type ,category):
+    transaction_date = date.today().strftime("%m/%Y")
+    with open(CSV_FILE, "a", newline="") as f:   
+        writer = csv.writer(f)
+        writer.writerow([amount, transaction_type, category, transaction_date])  # list created with the amount of money inputted, type is sub category, category is type of income/expense  and date 
+
+
+
 
 
 # Introduction
@@ -61,40 +79,14 @@ def intro():
 
 def expense1():
 
-        print("What type of expense is this?")
-        print("Please select an option from the menu below using the numbers")
-        print("\n1 House utilites, \n2 Personal Expenses, \n3 Leisure, \n4 Savings \n5 Other Expenses")
+    print("1 House Utilities")
+    print("2 Personal Expenses")
+    print("3 Leisure")
+    print("4 Savings")
+    print("5 Other Expenses")
 
-        expense1 = int(input(""))
-
-        if expense1 == 1:
-            print("You have selected house utilities.")
-            houseutilities = float(input("Please enter the amount of your house utilities: "))
-            print("£", houseutilities, "has been added to your budget tracker.")
-
-
-        elif expense1 == 2:
-            print("You have selected personal expenses.")
-            personalexpenses = float(input("Please enter the amount of your personal expenses: "))
-            print("£", personalexpenses, "has been added to your budget tracker.")
-
-        elif expense1 == 3:
-            print("You have selected leisure.")
-            leisureexpenses = float(input("Please enter the amount of your leisure expenses: "))
-            print("£", leisureexpenses, "has been added to your budget tracker.")
-
-        elif expense1 == 4:
-            print("You have selected savings.")
-            savings = float(input("Please enter the amount of your savings: "))
-            print("£", savings, "has been added to your budget tracker.")
-
-        elif expense1 == 5:
-            print("Enter any other expenses.")
-            otherexpenses = float(input("Please enter the amount of your other expenses: "))
-            print("£", otherexpenses, "has been added to your budget tracker.")
-
-        else:
-            print("Invalid option selected. Please select a number between 1 - 5")
+    expense_choice = input("")
+    return expense_choice        
 
 
 #Housing bill menu 
@@ -109,27 +101,28 @@ def housing_bills():
 
         if housing_bills == 1:
             print("You have selected Rent")
-            rent = float(input("Please enter your Rent"))
+            rent = float(input("Please enter your Rent:"))
+            savedata(rent, "Expense", "Rent")
             print("£", rent, "has been added to your budget tracker." )
         elif housing_bills == 2:
             print ("You have selected Electricity.")
-            electricity = float(input("Please enter the amount for your Electricity."))
+            electricity = float(input("Please enter the amount for your Electricity:"))
             print("£", electricity, "has been added to your budget tracker.")
         elif housing_bills == 3:
             print ("You have selected Gas.")
-            gas = float(input("Please enter the amount for your Gas."))
+            gas = float(input("Please enter the amount for your Gas:"))
             print("£", gas, "has been added to your budget tracker.")
         elif housing_bills == 4:
             print ("You have selected Council Tax.")
-            electricity = float(input("Please enter the amount for your Council Tax."))
+            electricity = float(input("Please enter the amount for your Council Tax:"))
             print("£", electricity, "has been added to your budget tracker.")
         elif housing_bills == 5:
             print ("You have selected Council Water.")
-            water = float(input("Please enter the amount for your Water."))
+            water = float(input("Please enter the amount for your Water:"))
             print("£", water, "has been added to your budget tracker.")
         elif housing_bills == 6:
             print ("You have selected Other.")
-            otherh = float(input("Please enter the amount for your Council Tax."))
+            otherh = float(input("Please enter the amount for your Council Tax:"))
             print("£", otherh, "has been added to your budget tracker.")
         else:
             print("Invalid option selected. Please select a number between 1 - 6")
@@ -242,6 +235,7 @@ while True:
     elif menu == "3":
         print("You have selected View Budget Summary")
     elif menu == "4":
+         print("You have exited Budget Tracker!")
          break
     else:
         print("Invalid valid option. Returning to main menu.")
