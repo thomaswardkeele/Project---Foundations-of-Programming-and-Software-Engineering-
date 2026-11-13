@@ -12,7 +12,8 @@ CSV_FILE = BASE_DIR / "budgettracker.csv"
 #Saving data to CSV 
 
 def savedata(amount, transaction_type ,category):
-    transaction_date = date.today().strftime("%m/%Y")
+    transaction_date = date.today().strftime("%d/%m/%Y")
+
     with open(CSV_FILE, "a", newline="") as f:   
         writer = csv.writer(f)
         writer.writerow([amount, transaction_type, category, transaction_date])  # list created with the amount of money inputted, type is sub category, category is type of income/expense  and date 
@@ -46,10 +47,12 @@ def income_1():
         incomechoice = int(input(""))
         if incomechoice == 1:
             salary = float(input("Please enter the amount of your salary: "))
+            savedata(salary, "Income", "Salary")
             print("£",salary, "has been added to your tracker. Please press a button to continue" )
             
         elif incomechoice == 2:
             otherincome = float(input("Please enter the amount of your other income: "))
+            savedata(otherincome, "Income", "Other Income")
             print("£",otherincome, "has been added to your tracker. Please press a button to continue")
             
         else:
@@ -170,10 +173,10 @@ def personal_bills():
             savedata(food, "Expenses", "Food")
             print("£", food, "has been added to your budget tracker.")
         elif personal_bills == 5:
-                print ("You have selected other.")
-                otherp = float(input("Please enter the amount for your Council Tax."))
-                savedata(otherp, "Expenses", "Other Personal Bills")
-                print("£", otherp, "has been added to your budget tracker.")
+            print ("You have selected other.")
+            otherp = float(input("Please enter the amount for your Council Tax."))
+            savedata(otherp, "Expenses", "Other Personal Bills")
+            print("£", otherp, "has been added to your budget tracker.")
                 
         else :
             print("Invalid option selected. Please select a number between 1 - 5")
@@ -191,19 +194,22 @@ def leisure_bills():
         if leisure_bills == 1:
             print("You have selected Entertaintment")
             entertaintment = float(input("Please enter the amount of your entertaintment expenses: "))
-            savedata(entertaintment, "Expenses", "Expenses")
+            savedata(entertaintment, "Expenses", "Entertainment")
             print("£", entertaintment, "has been added to your budget tracker.")
         elif leisure_bills == 2:
             print("You have selected Clothes")
             clothes = float(input("Please enter the amount of your clothes expenses: "))
+            savedata(clothes, "Expenses", "CLothes")
             print("£", clothes, "has been added to your budget tracker.")
         elif leisure_bills == 3:
             print("You have selected Hobbies")
             hobbies = float(input("Please enter the amount of your hobbies expenses: "))
+            savedata(hobbies,"Expenses" , "Hobbies")
             print("£", hobbies, "has been added to your budget tracker.")
         elif leisure_bills == 4:
             print("You have selected Other")
             otherl = float(input("Please enter the amount of any other expenses: "))
+            savedata(otherl, "Expenses", "Other Leisure" )
             print("£", otherl, "has been added to your budget tracker.")
         else:
             print("Invalid option selected. Please select a number between 1 - 4")
@@ -214,6 +220,7 @@ def savings():
         print("You have selected savings.")
         savings = float(input("Please enter the amount of your savings: "))
         savingscomment = input("Please enter a comment for your savings: ")
+        savedata(savings, "Expense" ,"savings")
         print ("£" + str(savings) + "0" +" " + ": "+ savingscomment + " has been put into Savings") 
 
 #other expense menu
@@ -222,6 +229,7 @@ def otherexpense():
         print ("You have selected other expenses.")
         others = float(input("Please enter what other expenses you have: "))
         otherscomment = input("Please enter a comment for this expense: ")
+        savedata(others, "Expense", "Other Expense")
         print ("£" + str(others) + "0" + " " + ": " + otherscomment + " has been put into Other Expenses")
 
 #Navigation menu
