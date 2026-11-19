@@ -1,6 +1,6 @@
 #I have used Gen AI for the purposes of checking and my reviewing my work in this assessment.
 
-#importing CSV 
+# Importing CSV 
 import csv
 from pathlib import Path
 from datetime import date
@@ -14,11 +14,43 @@ CSV_FILE = BASE_DIR / "budgettracker.csv"
 def savedata(amount, transaction_type ,category):
     transaction_date = date.today().strftime("%d/%m/%Y")
 
+    file_exists = CSV_FILE.exists()
+
     with open(CSV_FILE, "a", newline="") as f:   
-        writer = csv.writer(f)
+        writer = csv.writer(f)  
         writer.writerow([amount, transaction_type, category, transaction_date])  # list created with the amount of money inputted, type is sub category, category is type of income/expense  and date 
 
 
+#Reading CSV
+
+def viewbudget():
+    incometotal = 0.0
+    expensetotal = 0.0
+    
+    with open(CSV_FILE, "r", newline="") as f:
+        read = csv.reader(f)
+
+        for row in read:
+            if len(row) < 2 or not row[0].strip():
+                continue
+            try:
+                amount = float(row[0])
+            except ValueError:
+                continue
+
+            transaction_type = row[1].strip().lower()
+
+            if transaction_type == "income":
+                incometotal += amount 
+            elif transaction_type == "expense":
+                expensetotal += amount
+                
+    balance = incometotal - expensetotal 
+    print("       Budget Summary        ")
+    print("Total income:     £" + float(incometotal ))
+    print("Total expenses:   £" + float(expensetotal))
+    print("")
+    print("Money Remaining:  £" + float(balance))
 
 
 
@@ -175,7 +207,7 @@ def personal_bills():
         elif personal_bills == 5:
             print ("You have selected other.")
             otherp = float(input("Please enter the amount for your Council Tax."))
-            savedata(otherp, "Expenses", "Other Personal Bills")
+            savedata(otherp, "Expense", "Other Personal Bills")
             print("£", otherp, "has been added to your budget tracker.")
                 
         else :
@@ -194,22 +226,22 @@ def leisure_bills():
         if leisure_bills == 1:
             print("You have selected Entertaintment")
             entertaintment = float(input("Please enter the amount of your entertaintment expenses: "))
-            savedata(entertaintment, "Expenses", "Entertainment")
+            savedata(entertaintment, "Expense", "Entertainment")
             print("£", entertaintment, "has been added to your budget tracker.")
         elif leisure_bills == 2:
             print("You have selected Clothes")
             clothes = float(input("Please enter the amount of your clothes expenses: "))
-            savedata(clothes, "Expenses", "CLothes")
+            savedata(clothes, "Expense", "CLothes")
             print("£", clothes, "has been added to your budget tracker.")
         elif leisure_bills == 3:
             print("You have selected Hobbies")
             hobbies = float(input("Please enter the amount of your hobbies expenses: "))
-            savedata(hobbies,"Expenses" , "Hobbies")
+            savedata(hobbies,"Expense" , "Hobbies")
             print("£", hobbies, "has been added to your budget tracker.")
         elif leisure_bills == 4:
             print("You have selected Other")
             otherl = float(input("Please enter the amount of any other expenses: "))
-            savedata(otherl, "Expenses", "Other Leisure" )
+            savedata(otherl, "Expense", "Other Leisure" )
             print("£", otherl, "has been added to your budget tracker.")
         else:
             print("Invalid option selected. Please select a number between 1 - 4")
@@ -258,7 +290,10 @@ while True:
                 continue
 
     elif menu == "3":
+        viewbudget()
         print("You have selected View Budget Summary")
+        
+        
     elif menu == "4":
          print("You have exited Budget Tracker!")
          break
