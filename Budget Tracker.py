@@ -41,16 +41,18 @@ def viewbudget():
             transaction_type = row[1].strip().lower()
 
             if transaction_type == "income":
-                incometotal += amount 
+                incometotal += amount
             elif transaction_type == "expense":
                 expensetotal += amount
-                
-    balance = incometotal - expensetotal 
-    print("       Budget Summary        ")
-    print("Total income:     £" + float(incometotal ))
-    print("Total expenses:   £" + float(expensetotal))
-    print("")
-    print("Money Remaining:  £" + float(balance))
+
+        balance = incometotal - expensetotal
+
+        print("       Budget Summary        ")
+        
+        print("Total Income:     £" + str(incometotal))
+        print("Total Expenses:   £" + str(expensetotal))
+        print("")
+        print("Money Remaining:  £" + str(balance))
 
 
 
@@ -268,6 +270,7 @@ def otherexpense():
 intro()
 
 while True:
+    print("")
     first_menu()
 
     menu = input("")
@@ -295,8 +298,8 @@ while True:
         
         
     elif menu == "4":
-         print("You have exited Budget Tracker!")
-         break
+        print("You have exited Budget Tracker!")
+        break
     else:
         print("Invalid valid option. Returning to main menu.")
         continue
