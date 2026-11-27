@@ -293,8 +293,10 @@ while True:
                 continue
 
     elif menu == "3":
-        viewbudget()
         print("You have selected View Budget Summary")
+        print("\n")
+        viewbudget()
+
         
         
     elif menu == "4":
